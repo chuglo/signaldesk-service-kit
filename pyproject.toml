@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "signaldesk-service-kit"
+version = "0.1.0"
+description = "Small, security-focused primitives for SignalDesk service authentication."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "fastapi>=0.116,<0.117",
+  "httpx>=0.27,<1",
+  "pydantic>=2.8,<3",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3,<9",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/signaldesk_service_kit"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
