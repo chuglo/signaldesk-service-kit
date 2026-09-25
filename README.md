@@ -1,5 +1,7 @@
 # signaldesk-service-kit
 
+**Not for production use.**
+
 Typed, narrow security and HTTP client primitives shared by SignalDesk services.
 
 The package provides strict service-principal/credential models, constant-time
@@ -13,3 +15,7 @@ from signaldesk_service_kit.http import bounded_timeout
 
 Python 3.11 is supported. Install with `uv sync` and run tests with
 `uv run pytest -q`.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
